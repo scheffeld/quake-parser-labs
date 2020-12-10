@@ -5,4 +5,4 @@ app.get('/', (req, res) => {
     return res.json({ server: "up" })
 })
 
-app.listen(3333)
+module.exports = app
