@@ -1,0 +1,10 @@
+{
+  "name": "quake-parser-labs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": "https://github.com/scheffeld/quake-parser-labs",
+  "license": "MIT"
+}
