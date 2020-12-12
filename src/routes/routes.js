@@ -1,5 +1,4 @@
 const routes = require('express').Router();
-const games = require('../util/count');
 const LogController = require('../controllers/LogController');
 
 routes
