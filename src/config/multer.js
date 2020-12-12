@@ -8,7 +8,7 @@ module.exports = {
             cb(null, path.resolve(__dirname, '../../uploads'))
         },
         filename: (req, file, cb) => {
-            const fileName = 'game.log'
+            const fileName = 'games.log'
             cb(null, fileName)
         }
     }),

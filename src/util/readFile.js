@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path')
 
-const fileDir = path.join(__dirname, '../log/games.log')
+const fileDir = path.join(__dirname, '../../uploads/games.log')
 
 const gameLog = fs.readFileSync(fileDir)
     .toString()
