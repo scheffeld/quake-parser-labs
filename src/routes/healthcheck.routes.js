@@ -1,6 +1,6 @@
 const routes = require('express').Router();
 
-routes.get('/api/v1/healtcheck', (req, res) => {
+routes.get('/api/v1/healthcheck', (req, res) => {
     try{
         const hcInfo = {
             uptime: process.uptime(),
