@@ -5,6 +5,6 @@ describe('Parse file to JSON', () => {
         const games = parser;
 
         expect(games).toBeTruthy();
-        expect(typeof response).toBe('object');
+        expect(typeof games).toBe('object');
     });
 });

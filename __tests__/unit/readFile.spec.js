@@ -6,6 +6,6 @@ describe('Read log file of the game', () => {
         const file = readFile;
 
         expect(file).toBeTruthy();
-        expect(typeof response).toBe('object');
+        expect(typeof file).toBe('object');
     });
 });
