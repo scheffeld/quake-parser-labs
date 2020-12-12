@@ -44,6 +44,24 @@ rogerscheffeld@mbp:˜$ yarn test
 
 Caso o chrome não abra automaticamente, acesse o link [http://localhost:3333](http://localhost:3333).
 
+#### GET: /api/v1/healthcheck
+
+Endpoint para monitorar a saúde da aplicação.
+
+<b>Resposta</b>
+
+```JSON
+{
+  "uptime": 4.496053299,
+  "message": "UP",
+  "timestamp": 1607812833792
+}
+```
+
+#### POST: /api/v1/upload
+
+Endpoint para realizar o upload de um arquivo de log.
+
 #### GET: /api/v1/games
 
 Endpoint que retorna um JSON com os dados de todos as partidas registradas no log do Quake 3 Arena.
