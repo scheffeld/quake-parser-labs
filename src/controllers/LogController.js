@@ -1,4 +1,4 @@
-const games = require('../util/count');
+const games = require('../util/parser');
 
 module.exports = {
     index(req, res){
