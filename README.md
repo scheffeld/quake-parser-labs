@@ -26,24 +26,29 @@ Ambiente de desenvolvimento
 ```console
 rogerscheffeld@mbp:˜$ yarn dev
 ```
-[http://localhost:3333](http://localhost:3333/)
 
 Ambiente de produção
 ```console
-rogerscheffeld in quake-parser-labs
-> yarn start
+rogerscheffeld@mbp:˜$ yarn start
 ```
 
 <b>Testes</b>
 
 ```console
-rogerscheffeld in quake-parser-labs
-> yarn test
+rogerscheffeld@mbp:˜$ yarn test
 ```
 
-### Resposta
+### Endpoints
 
-A resposta deve seguir o exemplo a baixo:
+#### Base URL
+
+Caso o chrome não abra automaticamente, acesse o link [http://localhost:3333](http://localhost:3333).
+
+#### GET: /api/v1/games
+
+Endpoint que retorna um JSON com os dados de todos as partidas registradas no log do Quake 3 Arena.
+
+<b>Resposta</b>
 
 ```JSON
 {
@@ -67,6 +72,24 @@ A resposta deve seguir o exemplo a baixo:
             "Isgalamido": -7,
             "Dono da Bola": 0,
             "Mocinha": 0
+        }
+    }
+}
+```
+
+#### GET: /api/v1/games/:game
+
+Endpoint que retorna um JSON com os dados de uma partida especifica registrada no log do Quake 3 Arena.
+
+```JSON
+{
+    "game_1": {
+        "total_kills": 0,
+        "players": [
+            "Isgalamido"
+        ],
+        "kills": {
+            "Isgalamido": 0
         }
     }
 }
