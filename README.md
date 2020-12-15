@@ -78,7 +78,7 @@ Endpoint que retorna um JSON com os dados de todos as partidas registradas no lo
 }
 ```
 
-#### GET: /api/v1/games/:game
+#### GET: /api/v1/games/:id
 
 Endpoint que retorna um JSON com os dados de uma partida especifica registrada no log do Quake 3 Arena.
 

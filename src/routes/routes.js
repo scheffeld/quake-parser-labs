@@ -4,9 +4,19 @@ const multerConfig = require('../config/multer');
 const LogController = require('../controllers/LogController');
 const UploadFileController = require('../controllers/UploadFileController');
 
-routes
-    .post('/api/v1/upload', multer(multerConfig).single('file'), UploadFileController.upload)
-    .get('/api/v1/games', LogController.index)
-    .get('/api/v1/games/:game', LogController.show)
+/**
+ * Rota para realizar o upload do arquivo de log
+ */
+routes.post('/api/v1/upload', multer(multerConfig).single('file'), UploadFileController.upload);
 
-module.exports = routes
+/**
+ * Rota para retornar todas as partidas do log
+ */
+routes.get('/api/v1/games', LogController.index);
+
+/**
+ * Rota para retornar uma partida específica do log
+ */
+routes.get('/api/v1/games/:id', LogController.show);
+
+module.exports = routes;
