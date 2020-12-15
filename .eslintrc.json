@@ -1,0 +1,14 @@
+{
+    "env": {
+        "jest": true
+    },
+    "extends": "airbnb-base",
+    "rules": {
+        "prefer-destructuring":"warn",
+        "arrow-body-style":"off",
+        "no-unused-expressions":"warn",
+        "no-plusplus":"off",
+        "camelcase":"warn",
+        "linebreak-style": "off"
+    }
+}
