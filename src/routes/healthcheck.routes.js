@@ -1,18 +1,15 @@
 const routes = require('express').Router();
 
+/**
+ * Rota para retornar o status/saúde da aplicação
+ */
 routes.get('/api/v1/healthcheck', (req, res) => {
-    try{
-        const hcInfo = {
-            uptime: process.uptime(),
-            message: 'UP',
-            timestamp: Date.now()
-        }
-
-        return res.status(200).json(hcInfo);
-    }
-    catch(e){
-        return res.status(500).json(e);
-    }
+  return res.status(200).json({
+    uptime: process.uptime(),
+    status: 'UP',
+    port: process.env.PORT || 3001,
+    timestamp: Date.now(),
+  });
 });
 
-module.exports = routes
+module.exports = routes;
