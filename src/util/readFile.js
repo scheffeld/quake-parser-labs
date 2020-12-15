@@ -1,10 +1,7 @@
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 
-const fileDir = path.join(__dirname, '../../uploads/games.log')
+const fileDir = path.join(__dirname, '../../uploads/games.log');
+const gameLog = fs.readFileSync(fileDir).toString().split(/\n/);
 
-const gameLog = fs.readFileSync(fileDir)
-    .toString()
-    .split(/\n/)
-
-module.exports = gameLog
+module.exports = gameLog;
