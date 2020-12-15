@@ -1,13 +1,13 @@
-const games = require('../util/parser');
+const games = require('../api/parser');
 
 module.exports = {
-    index(req, res){
-        return res.status(200).json(games)
-    },
-    show(req, res){
-        const { game } = req.params
-        const findGame = `game_${game}`
+  index(req, res) {
+    return res.status(200).json(games);
+  },
+  show(req, res) {
+    const { id } = req.params;
+    const key = `game_${id}`;
 
-        return res.status(200).json({ [findGame] : games[findGame] })
-    }
-}
+    return res.status(200).json({ [key]: games[key] });
+  },
+};
