@@ -74,5 +74,5 @@ describe('Upload file', () => {
       .then((res) => {
         expect(res.status).toBe(201);
       });
-  }, 5000);
+  });
 });
