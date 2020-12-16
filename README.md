@@ -36,7 +36,8 @@ Endpoint para monitorar a saúde da aplicação.
 ```JSON
 {
   "uptime": 4.496053299,
-  "message": "UP",
+  "status": "UP",
+  "port": 3001,
   "timestamp": 1607812833792
 }
 ```
