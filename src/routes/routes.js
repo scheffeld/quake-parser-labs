@@ -1,8 +1,5 @@
 const routes = require('express').Router();
-const multer = require('multer');
-const multerConfig = require('../config/multer');
 const LogController = require('../controllers/LogController');
-const UploadFileController = require('../controllers/UploadFileController');
 
 /**
  * Rota para realizar a checagem do status da aplicacao
@@ -15,11 +12,6 @@ routes.get('/api/v1/healthcheck', (req, res) => {
     timestamp: Date.now(),
   });
 });
-
-/**
- * Rota para realizar o upload do arquivo de log
- */
-routes.post('/api/v1/upload', multer(multerConfig).single('file'), UploadFileController.upload);
 
 /**
  * Rota para retornar todas as partidas do log
