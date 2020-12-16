@@ -1,10 +1,9 @@
 {
   "name": "quake-parser-labs",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "start": "node src/config/server.js",
-    "dev": "nodemon src/config/server.js",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
     "test": "npx jest --coverage"
   },
   "repository": "https://github.com/scheffeld/quake-parser-labs",
