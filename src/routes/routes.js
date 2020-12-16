@@ -5,6 +5,18 @@ const LogController = require('../controllers/LogController');
 const UploadFileController = require('../controllers/UploadFileController');
 
 /**
+ * Rota para realizar a checagem do status da aplicacao
+ */
+routes.get('/api/v1/healthcheck', (req, res) => {
+  return res.status(200).json({
+    uptime: process.uptime(),
+    status: 'UP',
+    port: process.env.PORT || 3001,
+    timestamp: Date.now(),
+  });
+});
+
+/**
  * Rota para realizar o upload do arquivo de log
  */
 routes.post('/api/v1/upload', multer(multerConfig).single('file'), UploadFileController.upload);
