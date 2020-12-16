@@ -41,10 +41,6 @@ Endpoint para monitorar a saúde da aplicação.
 }
 ```
 
-#### POST: /api/v1/upload
-
-Endpoint para realizar o upload de um arquivo de log.
-
 #### GET: /api/v1/games
 
 Endpoint que retorna um JSON com os dados de todos as partidas registradas no log do Quake 3 Arena.
