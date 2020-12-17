@@ -9,6 +9,8 @@
         "no-unused-expressions":"warn",
         "no-plusplus":"off",
         "camelcase":"warn",
-        "linebreak-style": "off"
+        "linebreak-style": "off",
+        "no-param-reassign": "off",
+        "no-undef": "off"
     }
 }
