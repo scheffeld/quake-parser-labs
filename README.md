@@ -1,33 +1,38 @@
 # Quake Parser
-### Setup
 
-<b>Instalação</b>
+## Sobre
+
+Quake Parser é um parser para processar os dados de um log do jogo Quake 3 Atena. Esse parser lê, processa e agrupa os dados de cada partida do jogo, retornando um JSON com os dados processados.
+
+## Setup
+
+### Instalação
 
 ```console
 $ npm install
 ```
 
-<b>Execução</b>
+### Execução
 
-Ambiente de desenvolvimento
+<b>Ambiente de desenvolvimento</b>
 ```console
 $ npm dev
 ```
 
-Ambiente de produção
+<b>Ambiente de produção</b>
 ```console
 $ npm start
 ```
 
-<b>Testes</b>
+### Testes
 
 ```console
 $ npm test
 ```
 
-### Endpoints
+## Endpoints
 
-#### GET: /api/v1/healthcheck
+### GET: /api/v1/healthcheck
 
 Endpoint para monitorar a saúde da aplicação.
 
@@ -42,11 +47,11 @@ Endpoint para monitorar a saúde da aplicação.
 }
 ```
 
-#### GET: /api/v1/games
+### GET: /api/v1/games
 
 Endpoint que retorna um JSON com os dados de todos as partidas registradas no log do Quake 3 Arena.
 
-<b>Resposta</b>
+#### Resposta
 
 ```JSON
 {
@@ -75,9 +80,11 @@ Endpoint que retorna um JSON com os dados de todos as partidas registradas no lo
 }
 ```
 
-#### GET: /api/v1/games/:id
+### GET: /api/v1/games/:id
 
 Endpoint que retorna um JSON com os dados de uma partida especifica registrada no log do Quake 3 Arena.
+
+#### Resposta
 
 ```JSON
 {
