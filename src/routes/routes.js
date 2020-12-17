@@ -2,7 +2,7 @@ const routes = require('express').Router();
 const LogController = require('../controllers/LogController');
 
 /**
- * Rota para realizar a checagem do status da aplicacao
+ * Route to check the status of the application
  */
 routes.get('/api/v1/healthcheck', (req, res) => {
   return res.status(200).json({
@@ -14,12 +14,12 @@ routes.get('/api/v1/healthcheck', (req, res) => {
 });
 
 /**
- * Rota para retornar todas as partidas do log
+ * Route to return all games
  */
 routes.get('/api/v1/games', LogController.index);
 
 /**
- * Rota para retornar uma partida específica do log
+ * Route to return a specific game
  */
 routes.get('/api/v1/games/:id', LogController.show);
 

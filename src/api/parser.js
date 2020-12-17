@@ -77,7 +77,6 @@ log.forEach((logLine) => {
   const line = logLine.trim().split(/[\\]/);
   const arrayLine = line[0].split(' ');
   const action = arrayLine[1];
-  // const key = `game_${games.size + 1}`;
 
   switch (action) {
     case 'InitGame:':
@@ -97,8 +96,10 @@ log.forEach((logLine) => {
   }
 });
 
+/**
+ * Converting games Map to Object
+ */
 games.forEach((value, key) => {
-  // eslint-disable-next-line no-param-reassign
   value.kills = Object.fromEntries(value.kills);
   games.set(key, value);
 });
